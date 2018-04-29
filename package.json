@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "knex": "knex"
   },
   "dependencies": {
     "browserify": "^16.2.0",
@@ -15,6 +16,7 @@
     "http-errors": "~1.6.2",
     "knex": "^0.14.6",
     "morgan": "~1.9.0",
+    "npm": "^6.0.0",
     "pg": "^7.4.1",
     "quagga": "^0.12.1"
   },

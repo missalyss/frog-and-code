@@ -5,6 +5,7 @@ body {
   /* background-image: linear-gradient('../images/space-stuff.png'); */
   color: #FFFFFF;
   font: 15px copperplate;
+  cursor: crosshair;
 }
 
 marquee {

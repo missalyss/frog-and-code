@@ -1,0 +1,34 @@
+<h3>Behold: Albums</h3>
+<button type="button" name="button">
+  <a href="/music/new">new album</a>
+</button>
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Image</th>
+    <th>Rating</th>
+    <th>Review</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  {{#each allAlbums}}
+  <tr>
+    <td>
+      <a href="./music/{{this.id}}">
+        {{this.title}}
+      </a>
+    </td>
+    <td>
+      <img class="table-thumb" src="{{this.img_url}}" alt="{{this.title}} Album Image" />
+    </td>
+    <td>
+      <a href="./music/{{this.id}}/edit">
+        <span class="glyphicon glyphicon-pencil"></span>
+      </a>
+    </td>
+    <td>
+      <a href="./music/{{this.id}}/delete"><span class="glyphicon glyphicon-trash"></span></a>
+    </td>
+  </tr>
+  {{/each}}
+</table>

@@ -1,0 +1,36 @@
+<h3>New Album</h3>
+
+<div class="controls">
+  <fieldset class="input-group">
+    <input type="file" accept="image/*" capture="camera"/>
+  </fieldset>
+</div>
+
+{{#if error}}
+<div class="alert alert-danger">
+  {{this.error}}
+</div>
+{{/if}}
+<form class="form-group" action="/music/" method="post">
+{{this.string}}
+  <label for="name">Name of Album:</label>
+  <input class="form-control" id="name" type="text" name="name" placeholder="Name" value=""></br>
+
+  <label for="img_url">Image URL:</label>
+  {{#unless img_url}}
+  <input class="form-control" id="img_url" type="text" name="img_url" placeholder="Image URL" value="http://clipart-library.com/images/8cxrag66i.jpg"></br>
+  {{/unless}}
+
+</br>
+  <label for="review">Review:</label>
+  <textarea class="form-control" id="review" name="review" rows="3"></textarea></br>
+
+  <select class="" name="hardware">
+    <option value="vinyl">vinyl</option>
+    <option value="cd">cd</option>
+    <option value="casette">casette</option>
+  </select>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Frog and Code' });
+  res.render('index', { album: 'Frog and Code' });
   // CONSIDER SENDING THE DECODE FUNCTION  HERE
 });
 

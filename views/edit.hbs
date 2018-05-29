@@ -1,0 +1,43 @@
+{{#if error}}
+<div class="alert alert-danger">
+  {{this.error}}
+</div>
+{{/if}}
+
+  {{#each oneAlbum}}
+  <form class="form-group" action="/music/{{this.id}}?_method=PUT" method="post">
+
+  <h1>{{this.album}}</h1>
+
+  <label for="album">album:</label>
+  <input class="form-control" id="album" type="text" name="album" placeholder="album" value="{{this.album}}"></br>
+
+  <label for="artist">artist:</label>
+  <input class="form-control" id="artist" type="text" name="artist" placeholder="artist" value="{{this.artist}}"></br>
+
+  <label for="year">year:</label>
+  <input class="form-control" id="year" type="number" name="year" placeholder="year" value="{{this.year}}"></br>
+
+  <label for="label">label:</label>
+  <input class="form-control" id="label" type="text" name="label" placeholder="label" value="{{this.label}}"></br>
+
+  <label for="usp">usp:</label>
+  <input class="form-control" id="usp" type="number" name="usp" placeholder="usp" value="{{this.usp}}"></br>
+
+  <label for="img_url">image url:</label>
+  <input class="form-control" id="img_url" type="text" name="img_url" placeholder="image url" value="{{this.image_url}}"></br>
+
+
+  <label for="description">description:</label>
+  <textarea class="form-control" id="description" name="description" placeholder="descripto me" value="{{this.description}}" rows="3"></textarea></br>
+
+  <label for="hardware_type">hardware type:</label>
+  <select class="" name="hardware_type">
+    <option value="vinyl">vinyl</option>
+    <option value="cd">cd</option>
+    <option value="casette">casette</option>
+  </select>
+{{/each}}
+  <button type="submit" class="btn btn-primary">Save</button>
+
+</form>

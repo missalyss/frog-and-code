@@ -4,30 +4,51 @@
 </button>
 <table class="table">
   <tr>
-    <th>Title</th>
-    <th>Image</th>
-    <th>Rating</th>
-    <th>Review</th>
-    <th>Edit</th>
-    <th>Delete</th>
+    <th>image</th>
+    <th>album</th>
+    <th>artist</th>
+    <th>year</th>
+    <th>label</th>
+    <th>hardware</th>
+    <th>edit</th>
+    <th>delete</th>
   </tr>
   {{#each allAlbums}}
   <tr>
     <td>
+      <img class="table-thumb"
+      style="width: auto; height: 140px;" src="{{this.img_url}}" alt="{{this.album}} Album Image" />
+    </td>
+
+    <td>
       <a href="./music/{{this.id}}">
-        {{this.title}}
+        {{this.album}}
       </a>
     </td>
+
     <td>
-      <img class="table-thumb" src="{{this.img_url}}" alt="{{this.title}} Album Image" />
+        {{this.artist}}
     </td>
+
+    <td>
+        {{this.year}}
+    </td>
+
+    <td>
+        {{this.label}}
+    </td>
+
+    <td>
+      {{hardware_type}}
+    </td>
+
     <td>
       <a href="./music/{{this.id}}/edit">
-        <span class="glyphicon glyphicon-pencil"></span>
+        edit!<span class="glyphicon glyphicon-pencil"></span>
       </a>
     </td>
     <td>
-      <a href="./music/{{this.id}}/delete"><span class="glyphicon glyphicon-trash"></span></a>
+      <a href="./music/{{this.id}}/delete">deleted!<span class="glyphicon glyphicon-trash"></span></a>
     </td>
   </tr>
   {{/each}}

@@ -37,3 +37,7 @@ table {
   border: 2px white dotted;
   width: 100%;
 }
+
+img {
+  border: 3px white dashed;
+}

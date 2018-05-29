@@ -13,19 +13,30 @@
 {{/if}}
 <form class="form-group" action="/music/" method="post">
 {{this.string}}
-  <label for="name">Name of Album:</label>
-  <input class="form-control" id="name" type="text" name="name" placeholder="Name" value=""></br>
+  <label for="album">album:</label>
+  <input class="form-control" id="album" type="text" name="album" placeholder="album" value=""></br>
 
-  <label for="img_url">Image URL:</label>
-  {{#unless img_url}}
-  <input class="form-control" id="img_url" type="text" name="img_url" placeholder="Image URL" value="http://clipart-library.com/images/8cxrag66i.jpg"></br>
-  {{/unless}}
+  <label for="artist">artist:</label>
+  <input class="form-control" id="artist" type="text" name="artist" placeholder="artist" value=""></br>
+
+  <label for="year">year:</label>
+  <input class="form-control" id="year" type="number" name="year" placeholder="year" value=""></br>
+
+  <label for="label">label:</label>
+  <input class="form-control" id="label" type="text" name="label" placeholder="label" value=""></br>
+
+  <label for="usp">usp:</label>
+  <input class="form-control" id="usp" type="number" name="usp" placeholder="usp" value=""></br>
+
+  <label for="img_url">image url:</label>
+  <input class="form-control" id="img_url" type="text" name="img_url" placeholder="image url" value="http://www.elistmania.com/v2/wp-content/uploads/articlephotos/2076/Medium/Norberto_de_Freitas.jpg"></br>
 
 </br>
-  <label for="review">Review:</label>
-  <textarea class="form-control" id="review" name="review" rows="3"></textarea></br>
+  <label for="description">description:</label>
+  <textarea class="form-control" id="description" name="description" placeholder="descripto me" rows="3"></textarea></br>
 
-  <select class="" name="hardware">
+  <label for="hardware_type">hardware type:</label>
+  <select class="" name="hardware_type">
     <option value="vinyl">vinyl</option>
     <option value="cd">cd</option>
     <option value="casette">casette</option>

@@ -3,7 +3,7 @@
 exports.up = function (knex, Promise) {
   return knex.schema.createTable('music', function (t) {
     t.increments()
-    t.string('title').notNullable()
+    t.string('album').notNullable()
     t.string('artist').notNullable()
     t.bigInteger('usp').notNullable()
     t.string('label')
@@ -23,7 +23,7 @@ exports.down = function (knex, Promise) {
 // {
 //   "status": "Accepted",
 //   "thumb": "",
-//   "title": "Stockholm",
+//   "album": "Stockholm",
 //   "format": "CD",
 //   "Album",
 //   "label": "Svek",

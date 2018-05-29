@@ -7,7 +7,7 @@ exports.seed = function(knex, Promise) {
       return knex('music').insert([
         {
           id: 1,
-          title: 'All Melody',
+          album: 'All Melody',
           artist: 'Nils Frahm',
           usp: 4050486114407,
           label: 'Erased Tapes Records Ltd.',
@@ -18,7 +18,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 2,
-          title: 'Forth Wanderers',
+          album: 'Forth Wanderers',
           artist: 'Forth Wanderers',
           usp: 098787122244,
           label: 'SUBPOP',
@@ -29,14 +29,14 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 3,
-          title: 'Mona Bone Jakon',
+          album: 'Mona Bone Jakon',
           artist: 'Cat Stevens',
           usp: 123456789,
           label: 'A&M Records',
           year: 1991,
           hardware_type: 'vinyl',
-          description: 'it\'s a really great title ya know?',
-          img_url: 'image.jpg'
+          description: 'it\'s a really great album ya know?',
+          img_url: 'https://etr-media.s3-eu-west-1.amazonaws.com/925/cover.jpg'
         }
       ]);
     }).then(function () {
